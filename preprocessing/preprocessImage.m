@@ -1,6 +1,6 @@
 addpath(genpath('../visualizationModule'));
 
-imageFilename = '1';
+imageFilename = '6';
 predPath = '../images/predictions/';
 
 load('color150.mat');

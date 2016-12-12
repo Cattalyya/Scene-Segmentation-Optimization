@@ -10,11 +10,13 @@ load('objectName150.mat');
 load('color150.mat');
 
 % read image
-fileImg = 'images/originalImages/1.jpg';
-filePred = 'images/predictions/1.png';
-fileRefinedPred = 'images/refinedPredictions/1.png';
-fileAnno = 'images/annotations/1.png';
-
+filename = '6'
+fileImg = strcat('images/originalImages/',filename, '.jpg');
+filePred = strcat('images/predictions/',filename, '.png');
+% edge  avgEdge  neighborEdge  percentEdge
+fileRefinedPred = strcat('images/refinedPredictions/avgEdge/',filename, '.png');
+fileAnno = strcat('images/annotations/',filename, '.png');
+    
 im = imread(fileImg);
 imPred = imread(filePred);
 imRefinedPred = imread(fileRefinedPred);
