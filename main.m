@@ -1,3 +1,4 @@
+% import helper functions 
 addpath(genpath('functions/edgeDetection'));
 addpath(genpath('functions/evaluation'));
 
