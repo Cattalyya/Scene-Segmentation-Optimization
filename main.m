@@ -1,6 +1,9 @@
-imPath = 'images/';
-predPath = 'predictions/';
-annoPath = 'annotations/';
+addpath(genpath('functions/edgeDetection'));
+addpath(genpath('functions/evaluation'));
+
+imPath = 'images/originalImages/';
+predPath = 'images/predictions/';
+annoPath = 'images/annotations/';
 filename = '1';
 
 img = imread(strcat(imPath,filename,'.jpg'));       % RGB img
@@ -23,4 +26,4 @@ edgeImg = findEdge(imgBW,50);   % hard-code values
 newPredImg = regroup(predImg, edgeImg);
 figure
 imshow(newPredImg);
-% imwrite(strcat('newPredictions/',filename,'.png'));
+imwrite(newPredImg, strcat('images/refinedPredictions/',filename,'.png'));
