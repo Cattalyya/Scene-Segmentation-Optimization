@@ -5,8 +5,7 @@ close all; clc; clear;
 addpath(genpath('visualizationModule'));
 addpath(genpath('functions/helper'));
 
-% [gapLR gapTB], [marginB marginT], [marginL marginR]
-subplot = @(m,n,p) subtightplot (m, n, p, [0 0.04], [0 0.02], [0.03 0.03]);
+subplot = @(m,n,p) subtightplot (m, n, p, [0 0.08], [0 0.02], [0.02 0.02]);
 
 % load object names
 load('objectName150.mat');
@@ -38,7 +37,7 @@ colormap = colorMap(imPred, imAnno, objectNames);
 set(gcf, 'Name', [fileImg ' [Press any key to the next image...]'],  'NumberTitle','off');
 
 subplot(2,2,1);
-imshow(im); title('a) Original Image');
+imshow(im); title('a) Original Imagev (a)');
 % xlabh = xlabel('(1a)')
 % % [LR Top ?]
 % set(xlabh, 'Units', 'Normalized', 'Position', [0.5 -0.02 0]);
@@ -46,9 +45,10 @@ imshow(im); title('a) Original Image');
 % subplot(2,2,2);
 % imshow(colormap); title('Colormap');
 subplot(2,2,2);
-imshow(rgbAnno); title('b) Ground Truth');
+imshow(rgbAnno); title('Ground Truth');
 subplot(2,2,3);
-imshow(rgbPred); title('c) Demo Prediction');
+imshow(rgbPred); title('Demo Prediction');
 subplot(2,2,4);
-imshow(rgbRefinedPred); title('d) Refined Prediction');
+imshow(rgbRefinedPred); title('Refined Prediction');
+
 
