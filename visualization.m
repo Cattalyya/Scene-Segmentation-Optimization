@@ -14,7 +14,7 @@ filename = '6'
 fileImg = strcat('images/originalImages/',filename, '.jpg');
 filePred = strcat('images/predictions/',filename, '.png');
 % edge  avgEdge  neighborEdge  percentEdge
-fileRefinedPred = strcat('images/refinedPredictions/avgEdge/',filename, '.png');
+fileRefinedPred = strcat('images/refinedPredictions/percentEdge/',filename, '.png');
 fileAnno = strcat('images/annotations/',filename, '.png');
     
 im = imread(fileImg);

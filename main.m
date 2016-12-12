@@ -20,11 +20,11 @@ annoImg = imread(strcat(annoPath,filename,'.png')); % ground truth
 
 %% Gradient Thresholding %%%%%
 % edgeImg = findEdge(imgBW,30);   % hard-code values
- edgeImg = findAvgEdge(imgBW); % average values
-% edgeImg = findPercentEdge(imgBW,75);  % certain percentile
+%  edgeImg = findAvgEdge(imgBW); % average values
+edgeImg = findPercentEdge(imgBW,70);  % certain percentile
 % edgeImg = findNeighborEdge(imgBW,20);  % neighbor average
 
 newPredImg = regroup(predImg, edgeImg);
 figure
 imshow(newPredImg);
-imwrite(newPredImg, strcat('images/refinedPredictions/avgEdge/',filename,'.png'));
+imwrite(newPredImg, strcat('images/refinedPredictions/percentEdge/',filename,'.png'));
