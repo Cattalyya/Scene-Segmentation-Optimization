@@ -20,7 +20,7 @@ annoImg = imread(strcat(annoPath,filename,'.png')); % ground truth
 
 %% Gradient Thresholding %%%%%
 % edgeImg = findEdge(imgBW,30);   % hard-code values
-%  edgeImg = findAvgEdge(imgBW); % average values
+% edgeImg = findAvgEdge(imgBW); % average values
 edgeImg = findPercentEdge(imgBW,70);  % certain percentile
 % edgeImg = findNeighborEdge(imgBW,20);  % neighbor average
 
