@@ -1,5 +1,6 @@
-function edgeImg = findAvgEdge(imgBW)
+function edgeImg = findAvgEdge(imgBW,k)
 [Gmag,Gdir] = imgradient(imgBW);
 avg = mean(mean(Gmag));
-edgeImg = Gmag >= avg;
+avg
+edgeImg = Gmag >= avg/k;
 end

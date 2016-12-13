@@ -10,8 +10,8 @@ function success = visualizeFolder(folderPath,totalImg)
     for i = 1: totalImg
 
         % read image
-        filename = str(i)
-        fileImg = strcat(folderPath,filename, '.jpg');
+        filename = int2str(i)
+        fileImg = strcat(folderPath,filename, '.png');
 
         im = imread(fileImg);
 

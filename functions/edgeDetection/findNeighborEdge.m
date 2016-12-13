@@ -1,4 +1,4 @@
-function edgeImg = findNeighborEdge(imgBW,k)
+function edgeImg = findNeighborEdge(imgBW,k,factor)
 [Gmag,Gdir] = imgradient(imgBW);
 roww = size(Gmag,1);
 coll = size(Gmag,2);
@@ -15,7 +15,7 @@ for i=1:roww
             end
         end
         ttl = ttl / ((maxr - minr + 1)*(maxc - minc + 1));
-        edgeImg(i,j) = Gmag(i,j) >= ttl;
+        edgeImg(i,j) = Gmag(i,j) >= ttl/factor;
     end
 end
 end
